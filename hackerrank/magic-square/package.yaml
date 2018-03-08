@@ -1,0 +1,40 @@
+name:                magic-square
+version:             0.0.1.0
+github:              "rksm/coding-challenges"
+license:             MIT
+author:              "Robert Krahn"
+maintainer:          "robert@kra.hn"
+copyright:           "2018 Robert Krahn"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on Github at <https://github.com/rksm/coding-challenges#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  magic-square-exe:
+    main:                src/Main.hs
+    ghc-options:
+    - -O2
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - magic-square
+
+# tests:
+#   magic-square-test:
+#     main:                Spec.hs
+#     source-dirs:         test
+#     ghc-options:
+#     - -threaded
+#     - -rtsopts
+#     - -with-rtsopts=-N
+#     dependencies:
+#     - magic-square

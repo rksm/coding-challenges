@@ -1,20 +1,46 @@
-name:                magic-square
-version:             0.1.0.0
--- synopsis:
--- description:
-homepage:            https://github.com/rksm/magic-square#readme
-license:             BSD3
-license-file:        LICENSE
-author:              Robert Krahn
-maintainer:          robert@kra.hn
-copyright:           2018 Robert Krahn
-category:            Web
-build-type:          Simple
-cabal-version:       >=1.10
-extra-source-files:  README.md
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: a967e6356c2babc3f1d7b7adc03a6b523796c6ccd27284677b9dad04bdb8efe3
 
-executable magic-square
-  hs-source-dirs:      src
-  main-is:             Main.hs
-  default-language:    Haskell2010
-  build-depends:       base >= 4.7 && < 5
+name:           magic-square
+version:        0.0.1.0
+description:    Please see the README on Github at <https://github.com/rksm/coding-challenges#readme>
+homepage:       https://github.com/rksm/coding-challenges#readme
+bug-reports:    https://github.com/rksm/coding-challenges/issues
+author:         Robert Krahn
+maintainer:     robert@kra.hn
+copyright:      2018 Robert Krahn
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/rksm/coding-challenges
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  exposed-modules:
+      Main
+  other-modules:
+      Paths_magic_square
+  default-language: Haskell2010
+
+executable magic-square-exe
+  main-is: src/Main.hs
+  ghc-options: -O2 -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , magic-square
+  other-modules:
+      Paths_magic_square
+  default-language: Haskell2010
