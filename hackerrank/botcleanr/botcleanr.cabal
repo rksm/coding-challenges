@@ -1,0 +1,62 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 4ee96855189ae36a0b6555ad08cf0c5bbe4ba6be4f8bbdd9b709af70bde59609
+
+name:           botcleanr
+version:        0.1.0.0
+category:       Web
+homepage:       https://github.com/rksm/botcleanr#readme
+author:         Robert Krahn
+maintainer:     robert@kra.hn
+copyright:      2018 Robert Krahn
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    README.md
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , hspec
+  exposed-modules:
+      Botcleanr
+  other-modules:
+      Main
+      Paths_botcleanr
+  default-language: Haskell2010
+
+executable botcleanr
+  main-is: Main.hs
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , hspec
+  other-modules:
+      Botcleanr
+      Paths_botcleanr
+  default-language: Haskell2010
+
+test-suite botcleanr-test
+  type: exitcode-stdio-1.0
+  main-is: Test.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , botcleanr
+    , containers
+    , hspec
+  other-modules:
+      Paths_botcleanr
+  default-language: Haskell2010
